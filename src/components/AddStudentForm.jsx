@@ -10,8 +10,8 @@ const AddStudentForm = ({ onStudentAdded }) => {
     e.preventDefault();
     try {
       await addStudent(student);
-      onStudentAdded(); // Refresh the student list
-      setStudent({ name: '', address: '' }); // Reset form fields
+      onStudentAdded(); 
+      setStudent({ name: '', address: '' });
     } catch (err) {
       setError(err.response ? err.response.data : 'Failed to add student');
       console.error('Error details:', err);
